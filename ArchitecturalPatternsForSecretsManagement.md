@@ -9,6 +9,6 @@ Several strategies are employed for securing sensitive data in microservices. Th
  - Patterns the minimise the use of the credential if exposed
  - Patterns that prevent exploit on the credentials even without exposure
 
- # Patterns that prevent disclosure
+### Patterns that prevent disclosure
   
  Vaulted credentials made available through an in memory mount
