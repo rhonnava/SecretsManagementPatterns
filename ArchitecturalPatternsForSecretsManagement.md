@@ -16,6 +16,9 @@ Several strategies are employed for securing sensitive data in microservices. Th
 This is a pattern mmeant 
 
 **How does it address the concern of preventing disclosure**
- - Prevents persistence of the credentials at any point in time
+ - Prevents persistence of the credentials in clear text at any point in time
  - Makes the credentials available to the services at any point in time
- - Using a simple file systems ACLs these credentials can be locked down for access only by the required service. 
+ - Using a simple file systems ACLs these credentials can be locked down for access only by the required user if and group that the service. 
+ - This ensure that access to the secrets from the file system is not possible
+ 
+ 
