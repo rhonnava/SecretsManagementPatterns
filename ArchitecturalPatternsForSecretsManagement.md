@@ -20,13 +20,16 @@ Vault is one of the microservices in the ecosystem and its independant standalon
 
 Consumer services do not persist the secrets. Instead they fetch the secrets and maintain them in their runtime memory. This makes disclosure a lot more harder to scan the runtime memory of a running process. 
 
-There are several ways in which applications can read these secrets. It can be through
+There are several ways in which applications can read these secrets. 
+ - Through REST API integration into the Vault
+ - Through a secrets client daemon that makes the secrets available for the application in an in-memory file system mount with file system ACLs.
+ - In a container based environment secrets are made available through a client daemon running in a sidecar container.
 
 
 **How does it address the concern of preventing disclosure**
  - Prevents persistence of the credentials in clear text at any point in time
- - Makes the credentials available to the services at any point in time
- - Using a simple file systems ACLs these credentials can be locked down for access only by the required user if and group that the service. 
- - This ensure that access to the secrets from the file system is not possible
+ - Ensure the credentials are available to the services at runtime always, without the need for any manual intervention.
+ - Using a simple file systems ACLs these credentials can be locked down for access only by the required user and group that the service runs as. 
+ - This reduced the possiblity of copy and offline access to the secrets
  
  
