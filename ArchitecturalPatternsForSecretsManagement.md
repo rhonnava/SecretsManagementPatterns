@@ -8,6 +8,7 @@ Several strategies are employed for securing sensitive data in microservices. Th
  - Patterns that prevent exposure of credentials
  - Patterns the minimise the use of the credential if exposed
  - Patterns that prevent exploit on the credentials even without exposure
+ - Detect and tracing after the fact
 
 ## Patterns that prevent disclosure
   
