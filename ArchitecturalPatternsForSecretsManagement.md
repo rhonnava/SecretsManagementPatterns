@@ -37,4 +37,4 @@ There are several ways in which applications can read these secrets.
  Dynamic secrets
  
  ### 3. Centralizing trust
- 
+ Cloud based services centralize trust through IAM service
