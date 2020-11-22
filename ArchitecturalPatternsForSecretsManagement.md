@@ -10,9 +10,9 @@ Several strategies are employed for securing sensitive data in microservices. Th
  - Patterns that prevent exploit on the credentials even without exposure
  - Detect and tracing after the fact
 
-## Patterns that prevent disclosure
+## 1. Patterns that prevent disclosure
   
-### 1. Vaulted credentials made available through an in memory mount
+### A. Vaulted credentials made available through an in memory mount
 **Description** 
 Vault is one of the microservices in the ecosystem and its independant standalone reponsibility in the ecosystem is secrets management. This may include:
  - Protecting the secret at rest.
@@ -33,14 +33,15 @@ There are several ways in which applications can read these secrets.
  - Using a simple file systems ACLs these credentials can be locked down for access only by the required user and group that the service runs as. 
  - This reduced the possiblity of copy and offline access to the secrets
  
- ### 2. Solving the bootstrap problem
+ ### B. Solving the bootstrap problem
   - All cloud providers ensure secrets are tied to resources like VMs on which the application runs. Access to application resources is over an OAuth token, which is provided by a metadata service, accessible only by a link local address.
   - These are shortlived tokens
   
- ### 3. Preventing human intervention in the password generation andd provisioning process
+ ### C. Preventing human intervention in the password generation andd provisioning process
  Dynamic secrets
  
- ### 4. Centralizing trust
+ ### D. Centralizing trust (Preventing sprawl of secrets management)
  - Cloud based services centralize trust through IAM service
+ - Seperating out the concern of secrets management from service's functionality
  - No sprawl of secrets management provided by each application
  
