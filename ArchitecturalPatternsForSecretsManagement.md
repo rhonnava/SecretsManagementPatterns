@@ -5,9 +5,9 @@ A microservice based application consists of multiple microservices each perform
 These microservices need to be available all the time. This would mean they need to have the credentails needed to prove their identity but these credentials need to be protected from exposure.
 
 Several strategies are employed for securing sensitive data in microservices. This article helps declutter the choices into 3 concerns:
- - Patterns that prevent exposure of credentials
- - Patterns the minimise the use of the credential if exposed
- - Patterns that prevent exploit on the credentials even without exposure
+ - Patterns that prevent disclosure of credentials
+ - Patterns that minimise the impact of disclosure
+ - Patterns that prevent exploit on the credentials even without disclosure
  - Detect and tracing after the fact
 
 ## 1. Patterns that prevent disclosure
@@ -44,4 +44,22 @@ There are several ways in which applications can read these secrets.
  - Cloud based services centralize trust through IAM service
  - Seperating out the concern of secrets management from service's functionality
  - No sprawl of secrets management provided by each application
+
+## 2. Patterns that minimise the impact of disclosure
+A. Short lived secret
+
+Examples
+
+
+## 3. Patterns that prevent exploit on the credentials even without disclosure
+A. Preventing replay attacks.
+
+Example JWT tokens
+
+
+## 4. Detect and tracing after the fact
+
+
+
+## References
  
